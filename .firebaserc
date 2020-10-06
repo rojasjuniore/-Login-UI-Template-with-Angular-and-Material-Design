@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "bnf-project-b5ca4": {
+      "hosting": {
+        "admin-bnf": [
+          "bnf-project-b5ca4"
+        ]
+      }
+    }
+  }
+}

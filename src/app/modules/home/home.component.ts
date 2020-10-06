@@ -14,6 +14,15 @@ export class HomeComponent implements OnInit {
       shareReplay()
     );
 
+  menu_list = [
+    { name: "my Dashboard", route: "myDashboard" },
+    { name: "Users", route: "users" },
+    { name: "Reports", route: "reports" },
+    { name: "Advertising", route: "advertising" },
+    { name: "Packages", route: "packages" },
+    { name: "Logout", route: "/" }
+  ]
+
   constructor(private breakpointObserver: BreakpointObserver) { }
 
 

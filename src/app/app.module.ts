@@ -10,10 +10,17 @@ import { AngularMaterialModule } from './angular-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
+// Translate 
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+// Firebase 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { firebaseConfig } from "../environments/firebase.config";
+
 
 
 @NgModule({
@@ -32,6 +39,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
         deps: [HttpClient]
       }
     }),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule,
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule

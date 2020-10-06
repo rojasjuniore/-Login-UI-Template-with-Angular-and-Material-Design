@@ -62,7 +62,10 @@
                 }
               ]
             }
-          }
+          },
+          "allowedCommonJsDependencies": [
+            "@angular/fire/*"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -123,6 +126,10 @@
               "devServerTarget": "admin-bnf:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
